@@ -37,8 +37,8 @@ class spotipymain:
 class spotipysearchUSER:
     def __init__(self):
         self.name = input("\nName of artist -> ")
-        self.clientID = "24f5b30de8fc4bc2b53d5a3b5e51ee6e"
-        self.secretID = "ecc50ad105d545f2b4c65c0e6316739f"
+        self.clientID = "YOUR CLIENT ID"
+        self.secretID = "YOUR KEY SECRET"
         self.connect_spotify =  spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(self.clientID, self.secretID))
         self.results = self.connect_spotify.search(q="artist:" + self.name, type='artist')
 
@@ -66,8 +66,8 @@ class spotipysearchID:
         print(Colorate.Horizontal(Colors.blue_to_cyan, center(self.title)))
 
         self.id = input(f"{Colorate.Color(Colors.cyan, 'Artists ID -> ')}")
-        self.clientID = "24f5b30de8fc4bc2b53d5a3b5e51ee6e"
-        self.secretID = "ecc50ad105d545f2b4c65c0e6316739f"
+        self.clientID = "YOUR CLIENT ID"
+        self.secretID = "YOUR KEY SECRET"
         self.connect_spotify = spotipy.Spotify(
             client_credentials_manager=SpotifyClientCredentials(self.clientID, self.secretID))
         self.results = self.connect_spotify.artist_top_tracks(f'spotify:artist:{self.id}')
@@ -115,5 +115,4 @@ class spotipysearchID:
 
 spotipymain()
 
-# 58wXmynHaAWI5hwlPZP3qL
-# https://open.spotify.com/artist/58wXmynHaAWI5hwlPZP3qL
+
