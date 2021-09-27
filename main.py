@@ -107,9 +107,9 @@ class spotipysearchID:
 
         returnMain = input(f"{Colorate.Color(Colors.cyan, 'Replay (Y or N) -> ')}")
 
-        if returnMain.lower()[0:1] == 'y':
-            exit()
         if returnMain.lower()[0:1] == 'n':
+            exit()
+        if returnMain.lower()[0:1] == 'y':
             spotipymain()
 
 
